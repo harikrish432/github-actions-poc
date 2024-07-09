@@ -17,7 +17,7 @@ jobs:
         run: |
           aws cloudformation deploy \
             --template-file template.yaml \
-            --stack-name my-lambda-stack \
+            --stack-name my-lambda-stacksss \
             --capabilities CAPABILITY_NAMED_IAM
         
               
