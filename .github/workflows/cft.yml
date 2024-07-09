@@ -1,4 +1,4 @@
-name: cloudfromation deplpy
+name: Cloudfromation Deploy
 on: 
   workflow_dispatch:
 jobs:
