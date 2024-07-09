@@ -32,7 +32,7 @@ Resources:
       Handler: lambda_function.lambda_handler
       Role: !GetAtt LambdaExecutionRole.Arn
       Code:
-        S3Bucket: :mybucjet10215
+        S3Bucket: mybucjet10215
         S3Key: lambda.zip
       Runtime: python3.8
       Timeout: 30
