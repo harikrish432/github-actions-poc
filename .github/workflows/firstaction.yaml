@@ -1,0 +1,16 @@
+name: my first action
+
+on: push
+jobs:
+    my_first_job:
+        runs-on: ubuntu-latest
+        steps:
+             - name: this job does
+               run: echo "this is my first job"
+             - name: list this
+               run: ls
+
+             - name: check pwd
+               run: pwd
+               
+
