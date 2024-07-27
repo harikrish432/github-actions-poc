@@ -14,6 +14,6 @@ jobs:
                run: pwd
 
              - name: check disk size
-               run: df -sh
+               run: df -h
 
 
