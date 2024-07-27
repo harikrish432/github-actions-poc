@@ -12,5 +12,8 @@ jobs:
 
              - name: check pwd
                run: pwd
-               
+
+             - name: check disk size
+               run: df -sh
+
 
