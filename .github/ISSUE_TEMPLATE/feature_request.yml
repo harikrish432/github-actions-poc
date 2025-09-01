@@ -1,73 +1,39 @@
----
-name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
-
----
-
-name: Bug Report
-description: File a bug report.
-title: "[Bug]: "
-labels: ["bug", "triage"]
-projects: ["octo-org/1", "octo-org/44"]
-assignees:
-  - octocat
+name: "Ad Group Creation Request"
+description: "Submit details to create a new Active Directory group"
+title: "[Ad Group] <Enter group name here>"
+labels: ["ad-group-request"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
   - type: input
-    id: contact
+    id: group_name
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: "Group Name"
+      description: "Enter the AD group name to be created"
+      placeholder: "e.g., DevOps-Team"
     validations:
       required: true
-  - type: dropdown
-    id: version
+
+  - type: textarea
+    id: user_details
     attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-      default: 0
+      label: "User Details"
+      description: "Provide user details to be added (e.g., Name, Email, Username)"
+      placeholder: |
+        - Name: John Doe
+          Email: john.doe@example.com
+          Username: jdoe
+        - Name: Jane Smith
+          Email: jane.smith@example.com
+          Username: jsmith
     validations:
       required: true
+
   - type: dropdown
-    id: browsers
+    id: enable_group
     attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
+      label: "Enable Group Immediately?"
+      description: "Choose whether this group should be enabled after creation"
       options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com). 
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+        - "Yes"
+        - "No"
+    validations:
+      required: true
